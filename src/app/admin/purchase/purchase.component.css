@@ -1,0 +1,72 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #ccc;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.loading-message {
+  font-style: italic;
+  color: #666;
+}
+
+input[type="search"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="search"]:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.highlight {
+  background-color: #ffff99;
+  font-weight: bold;
+}
+
+.add-icons button {
+  background-color: #4CAF50; /* Green */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.add-icons button:hover {
+  background-color: #3e8e41; /* Dark Green */
+}
+
+.add-icons button:active {
+  background-color: #3e8e41; /* Dark Green */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

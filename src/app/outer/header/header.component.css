@@ -1,0 +1,101 @@
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.mat-toolbar-row {
+  display: flex;
+  justify-content: space-between; /* Space between title and nav */
+  align-items: center;
+}
+
+/* Toolbar title styling */
+.toolbar-title {
+  color: #fff;
+  font-size: 1.5em;
+  white-space: nowrap;
+  text-shadow: 0 0 10px #fff;
+  margin-right: auto;
+}
+
+/* Adding fade-in and bounce animation */
+.animated {
+  animation: fade-in-bounce 2s ease-in-out;
+}
+
+/* Keyframes for fade-in and slight bounce effect */
+@keyframes fade-in-bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Centering navigation items */
+.inline-nav {
+  display: flex;
+  justify-content: center; /* Centering the nav items */
+  align-items: center;
+  flex-grow: 1; /* Ensures the nav section takes available space */
+}
+
+.inline-nav a {
+  margin-left: 15px;
+  color: orange;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.inline-nav a:hover {
+  background-color: orange;
+  color: white;
+}
+
+/* Responsive Styles */
+
+/* Large screens (lg) */
+@media only screen and (min-width: 1200px) {
+  .inline-nav a {
+    margin-left: 20px;
+  }
+}
+
+/* Medium screens (md) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .inline-nav a {
+    margin-left: 15px;
+  }
+}
+
+/* Small screens (sm) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .toolbar-title {
+    font-size: 1.2em;
+  }
+}
+
+/* Extra small screens (xs) */
+@media only screen and (max-width: 767px) {
+  .toolbar-title {
+    font-size: 1.2em;
+  }
+  .inline-nav {
+    flex-direction: column; /* Stack nav items on smaller screens */
+    justify-content: center;
+  }
+  .inline-nav a {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,16 @@
+<app-admin-home></app-admin-home><br><br>
+<div class="container">
+    <h2>Place Order</h2>
+    <button (click)="onSubmit()" class="btn btn-primary">Place Order</button>
+  
+    <!-- Success message -->
+    <div *ngIf="successMessage" class="alert alert-success mt-3">
+      {{ successMessage }}
+    </div>
+  
+    <!-- Error message -->
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+      {{ errorMessage }}
+    </div>
+  </div>
+  

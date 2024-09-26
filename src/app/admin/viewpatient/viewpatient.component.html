@@ -1,0 +1,35 @@
+<app-admin-home></app-admin-home><br><br>
+<div class="container">
+    <h2>View Patient Details</h2>
+    <button (click)="viewPatientDetails()" class="btn btn-primary">View Patient Details</button>
+  
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+      {{ errorMessage }}
+    </div>
+  
+    <div *ngIf="patientData">
+      <h3>Patient Information</h3>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Patient Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Zip Code</th>
+            <th>Mobile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ patientData.patient_id }}</td>
+            <td>{{ patientData.firstname }}</td>
+            <td>{{ patientData.lastname }}</td>
+            <td>{{ patientData.zipcode }}</td>
+            <td>{{ patientData.mobile }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="add-icons"><button routerLink="/admin/placeorder">Place Order</button></div>
+  

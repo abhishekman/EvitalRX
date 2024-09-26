@@ -1,0 +1,95 @@
+mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  mat-nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    flex-wrap: wrap; 
+  }
+  .logout-button {
+    margin-right: 0;
+    background-color: #ff9900;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  .logout-button:hover {
+    background-color: #ff6600;
+  }
+  
+  mat-nav-item {
+    margin-right: 106px;
+    color: orange;
+  
+    cursor: pointer; 
+    flex: 1 1 30%; 
+  }
+  .mat-nav-item:hover {
+    background-color: orange;
+    color: white;
+  }
+  
+  .toolbar-title {
+    color: #fff; 
+    text-shadow: 0 0 10px #fff; 
+    animation: fade-in 2s; 
+  }
+  
+  .animated {
+    animation: bounce 2s;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Large screens (lg) */
+  @media only screen and (min-width: 1200px) {
+    mat-nav-item {
+      flex: 1 1 20%; 
+    }
+  }
+  
+  /* Medium screens (md) */
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    mat-nav-item {
+      flex: 1 1 25%; 
+    }
+  }
+  
+  /* Small screens (sm) */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    mat-nav-item {
+      flex: 1 1 33.33%; /* make nav items take up 33.33% of the width on small screens */
+    }
+    .toolbar-title {
+      font-size: 1.2em; /* increase font size of title on small screens */
+    }
+  }
+  
+  /* Extra small screens (xs) */
+  @media only screen and (max-width: 767px) {
+    mat-nav-list {
+      flex-direction: column;
+    }
+    mat-nav-item {
+      margin-right: 0;
+      flex: 1 1 100%; 
+    }
+    .toolbar-title {
+      font-size: 1.5em; 
+    }
+  }

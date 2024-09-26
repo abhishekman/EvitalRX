@@ -1,0 +1,79 @@
+<app-admin-home></app-admin-home><br><br>
+<div class="container">
+    <h2>Add Patient</h2>
+    <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="mobile">Mobile:</label>
+        <input id="mobile" formControlName="mobile" type="text" class="form-control" />
+        <div *ngIf="patientForm.get('mobile')?.invalid && (patientForm.get('mobile')?.touched || patientForm.get('mobile')?.dirty)" class="text-danger">
+          Mobile is required and must be 10 digits.
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="first_name">First Name:</label>
+        <input id="first_name" formControlName="first_name" type="text" class="form-control" />
+        <div *ngIf="patientForm.get('first_name')?.invalid && (patientForm.get('first_name')?.touched || patientForm.get('first_name')?.dirty)" class="text-danger">
+          First Name is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="last_name">Last Name:</label>
+        <input id="last_name" formControlName="last_name" type="text" class="form-control" />
+        <div *ngIf="patientForm.get('last_name')?.invalid && (patientForm.get('last_name')?.touched || patientForm.get('last_name')?.dirty)" class="text-danger">
+          Last Name is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="zipcode">Zipcode:</label>
+        <input id="zipcode" formControlName="zipcode" type="text" class="form-control" />
+        <div *ngIf="patientForm.get('zipcode')?.invalid && (patientForm.get('zipcode')?.touched || patientForm.get('zipcode')?.dirty)" class="text-danger">
+          Zipcode must be 5 digits.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input id="dob" formControlName="dob" type="date" class="form-control" />
+        <div *ngIf="patientForm.get('dob')?.invalid && (patientForm.get('dob')?.touched || patientForm.get('dob')?.dirty)" class="text-danger">
+          Date of Birth is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" formControlName="gender" class="form-control">
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <div *ngIf="patientForm.get('gender')?.invalid && (patientForm.get('gender')?.touched || patientForm.get('gender')?.dirty)" class="text-danger">
+          Gender is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="blood_group">Blood Group:</label>
+        <input id="blood_group" formControlName="blood_group" type="text" class="form-control" />
+        <div *ngIf="patientForm.get('blood_group')?.invalid && (patientForm.get('blood_group')?.touched || patientForm.get('blood_group')?.dirty)" class="text-danger">
+          Blood Group is required.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Add Patient</button>
+      
+      <div *ngIf="successMessage" class="alert alert-success mt-3">
+        {{ successMessage }}
+      </div>
+      <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+        {{ errorMessage }}
+      </div>
+    </form>
+</div>
+<div class="add-icons"><button routerLink="/admin/viewpatient">View Patient</button></div>
+
+
+

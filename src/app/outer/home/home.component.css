@@ -1,0 +1,122 @@
+#carouselExampleAutoplaying {
+    margin: 65px auto 40px; /* add margin from top and bottom, and center the carousel */
+    max-width: 100%; /* make the carousel full-width */
+    border-radius: 10px; /* add a subtle border radius */
+    overflow: hidden; /* hide the carousel's overflow */
+  }
+  
+  /* Make the carousel full-width on different devices */
+  @media (max-width: 1200px) {
+    #carouselExampleAutoplaying {
+      max-width: 90%; /* reduce the width on larger screens */
+    }
+  }
+  
+  @media (max-width: 992px) {
+    #carouselExampleAutoplaying {
+      max-width: 80%; /* reduce the width on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #carouselExampleAutoplaying {
+      max-width: 70%; /* reduce the width on small screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #carouselExampleAutoplaying {
+      max-width: 90vw; /* make the carousel full-width on mobile screens */
+      margin: 40px 10px; /* adjust the margin on mobile screens */
+    }
+  }
+  
+  .carousel-inner {
+    position: relative; /* make the carousel inner container relative */
+  }
+  
+  .carousel-item {
+    transition: transform 0.5s ease-in-out; /* add a smooth transition effect */
+  }
+  
+  .carousel-item img {
+    object-fit: cover; /* make the images cover the entire carousel item */
+    height: 500px; /* set a fixed height for the images */
+    width: 100%; /* make the images take up the full width */
+    border-radius: 10px 10px 0 0; /* add a border radius to the top corners */
+  }
+  
+  .carousel-item.active img {
+    transform: scale(1.1); /* add a subtle zoom effect to the active image */
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5); /* add a semi-transparent background to the controls */
+    width: 40px; /* set a fixed width for the controls */
+    height: 40px; /* set a fixed height for the controls */
+    border-radius: 50%; /* make the controls circular */
+    top: 50%; /* position the controls at the middle of the carousel */
+    transform: translateY(-50%); /* adjust the controls' position */
+  }
+  
+  .carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* add a hover effect to the controls */
+  }
+  
+  .carousel-indicators {
+    bottom: 20px; /* position the indicators at the bottom of the carousel */
+  }
+  
+  .carousel-indicators li {
+    background-color: #fff; /* set a white background for the indicators */
+    width: 10px; /* set a fixed width for the indicators */
+    height: 10px; /* set a fixed height for the indicators */
+    border-radius: 50%; /* make the indicators circular */
+  }
+  
+  .carousel-indicators li.active {
+    background-color: #337ab7; /* set a blue background for the active indicator */
+  }
+
+  /* card */
+  .why-buy {
+  background-color: #f7f7f7; /* light gray background */
+  padding: 20px; /* reduced padding to 20px */
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* distribute cards evenly */
+}
+
+.card {
+  margin: 20px; /* reduced margin to 20px */
+  width: 220px; /* reduced width to 220px */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* reduced padding to 15px */
+  flex: 1; /* make cards equal width */
+}
+
+.card img {
+  width: 100%;
+  height: 80px; /* reduced height to 80px */
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 18px; /* reduced font size to 18px */
+}
+
+.card p {
+  font-size: 14px; /* reduced font size to 14px */
+  color: #666;
+  margin-bottom: 15px; /* reduced margin bottom to 15px */
+}

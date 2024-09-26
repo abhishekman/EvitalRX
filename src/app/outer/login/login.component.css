@@ -1,0 +1,91 @@
+div.login-container {
+    background-image: url('/assets/loginbg.avif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  
+ 
+  
+
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  mat-form-field input[type="text"] {
+    transition: border-color 0.5s ease-in-out;
+  }
+  
+  mat-form-field.mat-focused input[type="text"] {
+    border-color: #3f51b5;
+  }
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3f51b5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button[type="submit"]:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: #fff;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  button[type="submit"]:hover:after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+  }
+
+
+  /* Styling for SignUp button */
+.signup-button {
+  background-color: #ff9800;  /* Orange background */
+  color: white;
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  text-transform: uppercase; /* Capitalize the text */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #e68a00; /* Darker shade of orange on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: scale(1.05); /* Slight grow effect */
+  color: white; /* Ensures text stays white */
+}
+
+/* Glowing effect on focus */
+.signup-button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 20px #ff9800; /* Glowing shadow */
+}
+
+.signup-button:active {
+  background-color: #cc7a00; /* Even darker shade on click */
+  transform: scale(0.98); /* Slight shrink on click */
+}

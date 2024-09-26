@@ -1,0 +1,41 @@
+<app-admin-home></app-admin-home>
+<br><br><div *ngIf="errorMessage">
+  <p class="error-message">{{ errorMessage }}</p>
+</div>
+
+
+<div *ngIf="medicines.length > 0">
+  <h3>Medicines List</h3>
+  <input type="search" [(ngModel)]="searchTerm" placeholder="Search by medicine name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="add-icons"><button routerLink="/admin/addpatient">Add</button></div>
+  <table>
+    <thead>
+      <tr>
+        <th>Sr. No.</th>
+        <th>Medicine Name</th>
+        <th>Content</th>
+        <th>MRP</th>
+        <th>Dosage Type</th>
+        <th>Packing Size</th>
+        <th>Available</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let medicine of filteredMedicines; let i = index" [class.highlight]="medicine.highlight">
+        <td>{{ i + 1 }}</td>
+        <td>{{ medicine.medicine_name }}</td>
+        <td>{{ medicine.content }}</td>
+        <td>{{ medicine.mrp }}</td>
+        <td>{{ medicine.dosage_type || 'N/A' }}</td>
+        <td>{{ medicine.packing_size }}</td>
+        <td>{{ medicine.available_for_patient === 'yes' ? 'Available' : 'Not Available' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="!medicines.length && !errorMessage">
+  <p class="loading-message">Loading data...</p>
+</div>
+
+
+
